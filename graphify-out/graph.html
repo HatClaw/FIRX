@@ -1,0 +1,858 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Grafo GrowMoney</title><body><h1>Grafo GrowMoney</h1><p>274 nós · 583 relações</p><pre class="mermaid">flowchart LR
+  "file:AGENTS.md"["AGENTS.md"]
+  "file:README.md"["README.md"]
+  "file:docs/ADMIN_SECURITY.md"["docs/ADMIN_SECURITY.md"]
+  "file:docs/API.md"["docs/API.md"]
+  "file:docs/ARCHITECTURE.md"["docs/ARCHITECTURE.md"]
+  "file:docs/DATA_MODEL.md"["docs/DATA_MODEL.md"]
+  "file:docs/DECISIONS.md"["docs/DECISIONS.md"]
+  "file:docs/DEVELOPMENT_STATUS.md"["docs/DEVELOPMENT_STATUS.md"]
+  "file:docs/SECURITY.md"["docs/SECURITY.md"]
+  "file:package.json"["package.json"]
+  "file:public/assets/pwa-icon.svg"["public/assets/pwa-icon.svg"]
+  "file:public/logo-grow-dark.svg"["public/logo-grow-dark.svg"]
+  "file:public/logo-grow.svg"["public/logo-grow.svg"]
+  "file:public/manifest.webmanifest"["public/manifest.webmanifest"]
+  "file:src/components/admin/AdminAccordionList.tsx"["src/components/admin/AdminAccordionList.tsx"]
+  "file:src/components/admin/AdminLayout.tsx"["src/components/admin/AdminLayout.tsx"]
+  "file:src/components/admin/AdminProtectedRoute.tsx"["src/components/admin/AdminProtectedRoute.tsx"]
+  "file:src/components/assinatura/SignaturePad.tsx"["src/components/assinatura/SignaturePad.tsx"]
+  "file:src/components/auth/GoogleButton.tsx"["src/components/auth/GoogleButton.tsx"]
+  "file:src/components/auth/ProtectedRoute.tsx"["src/components/auth/ProtectedRoute.tsx"]
+  "file:src/components/brand/BrandLogo.tsx"["src/components/brand/BrandLogo.tsx"]
+  "file:src/components/brand/FirstVisitIntro.tsx"["src/components/brand/FirstVisitIntro.tsx"]
+  "file:src/components/chat/LiveChat.tsx"["src/components/chat/LiveChat.tsx"]
+  "file:src/components/dashboard/ChartContainer.tsx"["src/components/dashboard/ChartContainer.tsx"]
+  "file:src/components/dashboard/ContratosStatusChart.tsx"["src/components/dashboard/ContratosStatusChart.tsx"]
+  "file:src/components/dashboard/DashboardFilters.tsx"["src/components/dashboard/DashboardFilters.tsx"]
+  "file:src/components/dashboard/DashboardShortcuts.tsx"["src/components/dashboard/DashboardShortcuts.tsx"]
+  "file:src/components/dashboard/KPICard.tsx"["src/components/dashboard/KPICard.tsx"]
+  "file:src/components/dashboard/RecebimentosChart.tsx"["src/components/dashboard/RecebimentosChart.tsx"]
+  "file:src/components/dashboard/VendedoresChart.tsx"["src/components/dashboard/VendedoresChart.tsx"]
+  "file:src/components/empresas/EmpresaSelector.tsx"["src/components/empresas/EmpresaSelector.tsx"]
+  "file:src/components/forms/ClientForm.tsx"["src/components/forms/ClientForm.tsx"]
+  "file:src/components/forms/ConviteForm.tsx"["src/components/forms/ConviteForm.tsx"]
+  "file:src/components/forms/EmpresaForm.tsx"["src/components/forms/EmpresaForm.tsx"]
+  "file:src/components/forms/ServicoForm.tsx"["src/components/forms/ServicoForm.tsx"]
+  "file:src/components/forms/VendedorForm.tsx"["src/components/forms/VendedorForm.tsx"]
+  "file:src/components/layout Sidebar.tsx"["src/components/layout Sidebar.tsx"]
+  "file:src/components/layout/AppLayout.tsx"["src/components/layout/AppLayout.tsx"]
+  "file:src/components/layout/GlobalFooter.tsx"["src/components/layout/GlobalFooter.tsx"]
+  "file:src/components/layout/Header.tsx"["src/components/layout/Header.tsx"]
+  "file:src/components/layout/MobileBottomNav.tsx"["src/components/layout/MobileBottomNav.tsx"]
+  "file:src/components/layout/Sidebar.tsx"["src/components/layout/Sidebar.tsx"]
+  "file:src/components/pwa/InstallPwaButton.tsx"["src/components/pwa/InstallPwaButton.tsx"]
+  "file:src/components/ui/Badge.tsx"["src/components/ui/Badge.tsx"]
+  "file:src/components/ui/Button.tsx"["src/components/ui/Button.tsx"]
+  "file:src/components/ui/Card.tsx"["src/components/ui/Card.tsx"]
+  "file:src/components/ui/EmptyState.tsx"["src/components/ui/EmptyState.tsx"]
+  "file:src/components/ui/FileUpload.tsx"["src/components/ui/FileUpload.tsx"]
+  "file:src/components/ui/FloatingThemeSwitcher.tsx"["src/components/ui/FloatingThemeSwitcher.tsx"]
+  "file:src/components/ui/Input.tsx"["src/components/ui/Input.tsx"]
+  "file:src/components/ui/Loading.tsx"["src/components/ui/Loading.tsx"]
+  "file:src/components/ui/Modal.tsx"["src/components/ui/Modal.tsx"]
+  "file:src/components/ui/PageHeader.tsx"["src/components/ui/PageHeader.tsx"]
+  "file:src/components/ui/index.ts"["src/components/ui/index.ts"]
+  "file:src/components/ui/sonar-grid.tsx"["src/components/ui/sonar-grid.tsx"]
+  "file:src/config/nav.ts"["src/config/nav.ts"]
+  "file:src/contexts/AdminAuthContext.tsx"["src/contexts/AdminAuthContext.tsx"]
+  "file:src/contexts/AuthContext.tsx"["src/contexts/AuthContext.tsx"]
+  "file:src/contexts/ThemeContext.tsx"["src/contexts/ThemeContext.tsx"]
+  "file:src/design-system/tokens.css"["src/design-system/tokens.css"]
+  "file:src/hooks/useAdminHiddenRecords.ts"["src/hooks/useAdminHiddenRecords.ts"]
+  "file:src/index.css"["src/index.css"]
+  "file:src/lib/admin-auth.ts"["src/lib/admin-auth.ts"]
+  "file:src/lib/agenda-types.ts"["src/lib/agenda-types.ts"]
+  "file:src/lib/assinatura-store.ts"["src/lib/assinatura-store.ts"]
+  "file:src/lib/assinatura-types.ts"["src/lib/assinatura-types.ts"]
+  "file:src/lib/auth-types.ts"["src/lib/auth-types.ts"]
+  "file:src/lib/brand.ts"["src/lib/brand.ts"]
+  "file:src/lib/client-types.ts"["src/lib/client-types.ts"]
+  "file:src/lib/contrato-calculo.test.ts"["src/lib/contrato-calculo.test.ts"]
+  "file:src/lib/contrato-calculo.ts"["src/lib/contrato-calculo.ts"]
+  "file:src/lib/contrato-template.ts"["src/lib/contrato-template.ts"]
+  "file:src/lib/contrato-types.ts"["src/lib/contrato-types.ts"]
+  "file:src/lib/contratos-store.test.ts"["src/lib/contratos-store.test.ts"]
+  "file:src/lib/contratos-store.ts"["src/lib/contratos-store.ts"]
+  "file:src/lib/dashboard-shortcuts.test.ts"["src/lib/dashboard-shortcuts.test.ts"]
+  "file:src/lib/dashboard-shortcuts.ts"["src/lib/dashboard-shortcuts.ts"]
+  "file:src/lib/dashboard-types.ts"["src/lib/dashboard-types.ts"]
+  "file:src/lib/email-templates.test.ts"["src/lib/email-templates.test.ts"]
+  "file:src/lib/email-templates.ts"["src/lib/email-templates.ts"]
+  "file:src/lib/empresa-types.ts"["src/lib/empresa-types.ts"]
+  "file:src/lib/export.ts"["src/lib/export.ts"]
+  "file:src/lib/financeiro-types.ts"["src/lib/financeiro-types.ts"]
+  "file:src/lib/permissions.ts"["src/lib/permissions.ts"]
+  "file:src/lib/servico-types.ts"["src/lib/servico-types.ts"]
+  "file:src/lib/supabase/client.ts"["src/lib/supabase/client.ts"]
+  "file:src/lib/utils.ts"["src/lib/utils.ts"]
+  "file:src/lib/vendedor-validation.test.ts"["src/lib/vendedor-validation.test.ts"]
+  "file:src/lib/vendedor-validation.ts"["src/lib/vendedor-validation.ts"]
+  "file:src/lib/vendor-visit-types.test.ts"["src/lib/vendor-visit-types.test.ts"]
+  "file:src/lib/vendor-visit-types.ts"["src/lib/vendor-visit-types.ts"]
+  "file:src/main.tsx"["src/main.tsx"]
+  "file:src/pages/admin/AdminArquivos.tsx"["src/pages/admin/AdminArquivos.tsx"]
+  "file:src/pages/admin/AdminAuditoria.tsx"["src/pages/admin/AdminAuditoria.tsx"]
+  "file:src/pages/admin/AdminDashboard.tsx"["src/pages/admin/AdminDashboard.tsx"]
+  "file:src/pages/admin/AdminEmpresas.tsx"["src/pages/admin/AdminEmpresas.tsx"]
+  "file:src/pages/admin/AdminLogin.tsx"["src/pages/admin/AdminLogin.tsx"]
+  "file:src/pages/admin/AdminRecursos.tsx"["src/pages/admin/AdminRecursos.tsx"]
+  "file:src/pages/admin/AdminSeguranca.tsx"["src/pages/admin/AdminSeguranca.tsx"]
+  "file:src/pages/admin/AdminSistema.tsx"["src/pages/admin/AdminSistema.tsx"]
+  "file:src/pages/admin/AdminUsuarios.tsx"["src/pages/admin/AdminUsuarios.tsx"]
+  "file:src/pages/auth/AuthCallback.tsx"["src/pages/auth/AuthCallback.tsx"]
+  "file:src/pages/auth/Cadastre.tsx"["src/pages/auth/Cadastre.tsx"]
+  "file:src/pages/auth/Cadastro.tsx"["src/pages/auth/Cadastro.tsx"]
+  "file:src/pages/auth/Login.tsx"["src/pages/auth/Login.tsx"]
+  "file:src/pages/auth/Privacidade.tsx"["src/pages/auth/Privacidade.tsx"]
+  "file:src/pages/auth/RecuperacaoSenha.tsx"["src/pages/auth/RecuperacaoSenha.tsx"]
+  "file:src/pages/auth/RecuperaçãoSenha.tsx"["src/pages/auth/RecuperaçãoSenha.tsx"]
+  "file:src/pages/auth/TermosUso.tsx"["src/pages/auth/TermosUso.tsx"]
+  "file:src/pages/dashboard/Agenda.tsx"["src/pages/dashboard/Agenda.tsx"]
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx"["src/pages/dashboard/AssinaturaDetalhe.tsx"]
+  "file:src/pages/dashboard/Assinaturas.tsx"["src/pages/dashboard/Assinaturas.tsx"]
+  "file:src/pages/dashboard/Auditoria.tsx"["src/pages/dashboard/Auditoria.tsx"]
+  "file:src/pages/dashboard/Clientes.tsx"["src/pages/dashboard/Clientes.tsx"]
+  "file:src/pages/dashboard/Configuracoes.tsx"["src/pages/dashboard/Configuracoes.tsx"]
+  "file:src/pages/dashboard/ContratoNovo.tsx"["src/pages/dashboard/ContratoNovo.tsx"]
+  "file:src/pages/dashboard/Contratos.tsx"["src/pages/dashboard/Contratos.tsx"]
+  "file:src/pages/dashboard/Dashboard.tsx"["src/pages/dashboard/Dashboard.tsx"]
+  "file:src/pages/dashboard/DashboardExecutivo.tsx"["src/pages/dashboard/DashboardExecutivo.tsx"]
+  "file:src/pages/dashboard/Empresas.tsx"["src/pages/dashboard/Empresas.tsx"]
+  "file:src/pages/dashboard/Financeiro.tsx"["src/pages/dashboard/Financeiro.tsx"]
+  "file:src/pages/dashboard/Perfil.tsx"["src/pages/dashboard/Perfil.tsx"]
+  "file:src/pages/dashboard/Relatorios.tsx"["src/pages/dashboard/Relatorios.tsx"]
+  "file:src/pages/dashboard/Servicos.tsx"["src/pages/dashboard/Servicos.tsx"]
+  "file:src/pages/dashboard/VendedorWorkspace.tsx"["src/pages/dashboard/VendedorWorkspace.tsx"]
+  "file:src/pages/dashboard/Vendedores.tsx"["src/pages/dashboard/Vendedores.tsx"]
+  "file:src/pages/dashboard/Visitas.tsx"["src/pages/dashboard/Visitas.tsx"]
+  "file:src/pages/marketing/MarketingWorkspace.tsx"["src/pages/marketing/MarketingWorkspace.tsx"]
+  "file:src/pages/public/AssinarDocumento.tsx"["src/pages/public/AssinarDocumento.tsx"]
+  "file:src/pages/public/LandingPage.tsx"["src/pages/public/LandingPage.tsx"]
+  "file:src/repositories/admin-audit-repository.ts"["src/repositories/admin-audit-repository.ts"]
+  "file:src/repositories/agenda-repository.ts"["src/repositories/agenda-repository.ts"]
+  "file:src/repositories/client-repository.test.ts"["src/repositories/client-repository.test.ts"]
+  "file:src/repositories/client-repository.ts"["src/repositories/client-repository.ts"]
+  "file:src/repositories/empresa-repository.ts"["src/repositories/empresa-repository.ts"]
+  "file:src/repositories/servico-repository.ts"["src/repositories/servico-repository.ts"]
+  "file:src/repositories/vendedor-repository.ts"["src/repositories/vendedor-repository.ts"]
+  "file:src/repositories/vendor-visit-repository.ts"["src/repositories/vendor-visit-repository.ts"]
+  "file:src/routes/ProtectedRoute.tsx"["src/routes/ProtectedRoute.tsx"]
+  "file:src/routes/index.ts"["src/routes/index.ts"]
+  "file:src/services/admin-audit-service.ts"["src/services/admin-audit-service.ts"]
+  "file:src/services/admin-file-service.ts"["src/services/admin-file-service.ts"]
+  "file:src/services/admin-hosting-migration-service.test.ts"["src/services/admin-hosting-migration-service.test.ts"]
+  "file:src/services/admin-hosting-migration-service.ts"["src/services/admin-hosting-migration-service.ts"]
+  "file:src/services/admin-resource-service.ts"["src/services/admin-resource-service.ts"]
+  "file:src/services/admin-smtp-service.ts"["src/services/admin-smtp-service.ts"]
+  "file:src/services/admin-system-backup-service.test.ts"["src/services/admin-system-backup-service.test.ts"]
+  "file:src/services/admin-system-backup-service.ts"["src/services/admin-system-backup-service.ts"]
+  "file:src/services/admin-user-service.ts"["src/services/admin-user-service.ts"]
+  "file:src/services/client-service.test.ts"["src/services/client-service.test.ts"]
+  "file:src/services/client-service.ts"["src/services/client-service.ts"]
+  "file:src/services/contrato-wizard-data.ts"["src/services/contrato-wizard-data.ts"]
+  "file:src/services/dashboard-activity-service.ts"["src/services/dashboard-activity-service.ts"]
+  "file:src/services/dashboard-overview-service.ts"["src/services/dashboard-overview-service.ts"]
+  "file:src/services/empresa-service.ts"["src/services/empresa-service.ts"]
+  "file:src/services/file-storage.ts"["src/services/file-storage.ts"]
+  "file:src/services/marketing-service.ts"["src/services/marketing-service.ts"]
+  "file:src/services/servico-catalogo-persistente.ts"["src/services/servico-catalogo-persistente.ts"]
+  "file:src/services/servico-service.ts"["src/services/servico-service.ts"]
+  "file:src/services/vendedor-service.ts"["src/services/vendedor-service.ts"]
+  "file:src/services/vendor-chat-service.ts"["src/services/vendor-chat-service.ts"]
+  "file:src/services/vendor-visit-service.ts"["src/services/vendor-visit-service.ts"]
+  "file:src/test/InstallPwaButton.test.tsx"["src/test/InstallPwaButton.test.tsx"]
+  "file:src/test/setup.ts"["src/test/setup.ts"]
+  "file:src/vite-env.d.ts"["src/vite-env.d.ts"]
+  "file:supabase/README.md"["supabase/README.md"]
+  "file:supabase/functions/admin-users/index.ts"["supabase/functions/admin-users/index.ts"]
+  "file:supabase/functions/get-signature-attachment/index.ts"["supabase/functions/get-signature-attachment/index.ts"]
+  "file:supabase/functions/marketing-invite/index.ts"["supabase/functions/marketing-invite/index.ts"]
+  "file:supabase/functions/smtp-mailer/index.ts"["supabase/functions/smtp-mailer/index.ts"]
+  "file:supabase/functions/vendor-chat/index.ts"["supabase/functions/vendor-chat/index.ts"]
+  "file:supabase/migrations/20261021000000_init_schema.sql"["supabase/migrations/20261021000000_init_schema.sql"]
+  "file:supabase/migrations/20261021010000_assinaturas.sql"["supabase/migrations/20261021010000_assinaturas.sql"]
+  "file:supabase/migrations/20261021130000_security_hardening.sql"["supabase/migrations/20261021130000_security_hardening.sql"]
+  "file:supabase/migrations/20261021144232_server_files_and_contract_records.sql"["supabase/migrations/20261021144232_server_files_and_contract_records.sql"]
+  "file:supabase/migrations/20261021170000_persistent_signature_envelopes.sql"["supabase/migrations/20261021170000_persistent_signature_envelopes.sql"]
+  "file:supabase/migrations/20261021170529_persistent_workspace_data.sql"["supabase/migrations/20261021170529_persistent_workspace_data.sql"]
+  "file:supabase/migrations/20261021170755_assign_platform_admin_to_sac.sql"["supabase/migrations/20261021170755_assign_platform_admin_to_sac.sql"]
+  "file:supabase/migrations/20261021171000_admin_console_and_audit.sql"["supabase/migrations/20261021171000_admin_console_and_audit.sql"]
+  "file:supabase/migrations/20261021185600_restore_platform_admin_check.sql"["supabase/migrations/20261021185600_restore_platform_admin_check.sql"]
+  "file:supabase/migrations/20261021185725_restrict_helper_rpc_access.sql"["supabase/migrations/20261021185725_restrict_helper_rpc_access.sql"]
+  "file:supabase/migrations/20261021193000_signature_public_access.sql"["supabase/migrations/20261021193000_signature_public_access.sql"]
+  "file:supabase/migrations/20261022010000_harden_profile_roles.sql"["supabase/migrations/20261022010000_harden_profile_roles.sql"]
+  "file:supabase/migrations/20261023010000_admin_only_tenant_updates.sql"["supabase/migrations/20261023010000_admin_only_tenant_updates.sql"]
+  "file:supabase/migrations/20261023024224_empresa_endereco.sql"["supabase/migrations/20261023024224_empresa_endereco.sql"]
+  "file:supabase/migrations/20261023035141_grant_admin_file_metadata_update.sql"["supabase/migrations/20261023035141_grant_admin_file_metadata_update.sql"]
+  "file:supabase/migrations/20261023035510_add_dashboard_activity_audit.sql"["supabase/migrations/20261023035510_add_dashboard_activity_audit.sql"]
+  "file:supabase/migrations/20261023040000_smtp_mailer_settings.sql"["supabase/migrations/20261023040000_smtp_mailer_settings.sql"]
+  "file:supabase/migrations/20261023041851_admin_system_backup_restore.sql"["supabase/migrations/20261023041851_admin_system_backup_restore.sql"]
+  "file:supabase/migrations/20261023043612_realtime_dashboard_notifications.sql"["supabase/migrations/20261023043612_realtime_dashboard_notifications.sql"]
+  "file:supabase/migrations/20261023044321_restrict_vendor_contract_visibility.sql"["supabase/migrations/20261023044321_restrict_vendor_contract_visibility.sql"]
+  "file:supabase/migrations/20261023044825_vendor_activation_email_tracking.sql"["supabase/migrations/20261023044825_vendor_activation_email_tracking.sql"]
+  "file:supabase/migrations/20261023045635_vendedor_dados_pessoais.sql"["supabase/migrations/20261023045635_vendedor_dados_pessoais.sql"]
+  "file:supabase/migrations/20261023050243_vendedor_empresa_chat.sql"["supabase/migrations/20261023050243_vendedor_empresa_chat.sql"]
+  "file:supabase/migrations/20261023054301_vendedor_visitas.sql"["supabase/migrations/20261023054301_vendedor_visitas.sql"]
+  "file:supabase/migrations/20261023090501_admin_email_templates.sql"["supabase/migrations/20261023090501_admin_email_templates.sql"]
+  "file:supabase/migrations/20261024160233_allow_pending_signature_contracts.sql"["supabase/migrations/20261024160233_allow_pending_signature_contracts.sql"]
+  "file:supabase/migrations/20261024160535_add_company_id_to_signature_envelopes.sql"["supabase/migrations/20261024160535_add_company_id_to_signature_envelopes.sql"]
+  "file:supabase/migrations/20261024180000_marketing_operations.sql"["supabase/migrations/20261024180000_marketing_operations.sql"]
+  "file:tailwind.config.ts"["tailwind.config.ts"]
+  "file:vite.config.ts"["vite.config.ts"]
+  "asset:public/.htaccess"["public/.htaccess"]
+  "asset:public/_redirects"["public/_redirects"]
+  "asset:public/api/.htaccess"["public/api/.htaccess"]
+  "asset:public/api/marketing-config.example.php"["public/api/marketing-config.example.php"]
+  "asset:public/api/marketing-files.php"["public/api/marketing-files.php"]
+  "asset:public/api/smtp.php"["public/api/smtp.php"]
+  "asset:public/assets/canal360-logo.png"["public/assets/canal360-logo.png"]
+  "asset:public/assets/grow-logo-black.png"["public/assets/grow-logo-black.png"]
+  "asset:public/assets/logo.png"["public/assets/logo.png"]
+  "asset:public/sw.js"["public/sw.js"]
+  "rpc:is_platform_admin"["is_platform_admin"]
+  "table:empresa_members"["empresa_members"]
+  "table:profiles"["profiles"]
+  "table:empresas"["empresas"]
+  "rpc:is_marketing_member"["is_marketing_member"]
+  "table:signature_envelopes"["signature_envelopes"]
+  "rpc:get_signature_envelope_by_token"["get_signature_envelope_by_token"]
+  "rpc:mark_signature_envelope_viewed"["mark_signature_envelope_viewed"]
+  "rpc:apply_signature_to_envelope"["apply_signature_to_envelope"]
+  "table:gm_contracts"["gm_contracts"]
+  "rpc:empresa_role"["empresa_role"]
+  "table:agenda"["agenda"]
+  "table:gm_financial_entries"["gm_financial_entries"]
+  "table:vendedores"["vendedores"]
+  "table:clients"["clients"]
+  "table:vendedor_visitas"["vendedor_visitas"]
+  "rpc:admin_list_audit"["admin_list_audit"]
+  "table:agenda_historico"["agenda_historico"]
+  "table:client_historico"["client_historico"]
+  "table:convites"["convites"]
+  "table:services"["services"]
+  "table:vendedor_desempenho"["vendedor_desempenho"]
+  "table:comissoes"["comissoes"]
+  "table:gm_files"["gm_files"]
+  "rpc:admin_log_event"["admin_log_event"]
+  "rpc:admin_restore_system_backup"["admin_restore_system_backup"]
+  "rpc:admin_clear_operational_data"["admin_clear_operational_data"]
+  "table:auditoria"["auditoria"]
+  "table:contratos"["contratos"]
+  "table:parcelas"["parcelas"]
+  "table:marketing_members"["marketing_members"]
+  "table:marketing_projects"["marketing_projects"]
+  "table:marketing_tasks"["marketing_tasks"]
+  "table:marketing_project_members"["marketing_project_members"]
+  "table:marketing_notifications"["marketing_notifications"]
+  "table:marketing_milestones"["marketing_milestones"]
+  "table:marketing_task_comments"["marketing_task_comments"]
+  "table:marketing_approvals"["marketing_approvals"]
+  "table:marketing_events"["marketing_events"]
+  "table:marketing_files"["marketing_files"]
+  "table:marketing_briefs"["marketing_briefs"]
+  "table:marketing_messages"["marketing_messages"]
+  "rpc:marketing_has_permission"["marketing_has_permission"]
+  "rpc:marketing_open_project_conversation"["marketing_open_project_conversation"]
+  "rpc:marketing_available_users"["marketing_available_users"]
+  "table:platform_admins"["platform_admins"]
+  "table:gm_vendor_activation_events"["gm_vendor_activation_events"]
+  "table:gm_admin_audit"["gm_admin_audit"]
+  "rpc:get_signature_attachment_by_token"["get_signature_attachment_by_token"]
+  "table:gm_smtp_settings"["gm_smtp_settings"]
+  "table:gm_email_templates"["gm_email_templates"]
+  "table:gm_smtp_mail_log"["gm_smtp_mail_log"]
+  "table:gm_chat_messages"["gm_chat_messages"]
+  "table:assinaturas"["assinaturas"]
+  "table:contrato_historico"["contrato_historico"]
+  "table:lancamentos"["lancamentos"]
+  "table:estornos"["estornos"]
+  "table:signature_signers"["signature_signers"]
+  "table:signature_events"["signature_events"]
+  "table:marketing_task_dependencies"["marketing_task_dependencies"]
+  "table:marketing_conversations"["marketing_conversations"]
+  "table:marketing_conversation_members"["marketing_conversation_members"]
+  "table:marketing_push_subscriptions"["marketing_push_subscriptions"]
+  "file:src/components/admin/AdminLayout.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/admin/AdminLayout.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/components/admin/AdminLayout.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/components/admin/AdminLayout.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/components/admin/AdminProtectedRoute.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/components/admin/AdminProtectedRoute.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/assinatura/SignaturePad.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/assinatura/SignaturePad.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/auth/GoogleButton.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/components/auth/GoogleButton.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/auth/ProtectedRoute.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/components/auth/ProtectedRoute.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/brand/BrandLogo.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/brand/BrandLogo.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/components/brand/BrandLogo.tsx" -->|imports| "file:src/contexts/ThemeContext.tsx"
+  "file:src/components/brand/FirstVisitIntro.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/components/chat/LiveChat.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/chat/LiveChat.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/components/chat/LiveChat.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/components/chat/LiveChat.tsx" -->|imports| "file:src/services/vendor-chat-service.ts"
+  "file:src/components/dashboard/ChartContainer.tsx" -->|imports| "file:src/components/ui/Card.tsx"
+  "file:src/components/dashboard/ChartContainer.tsx" -->|imports| "file:src/components/ui/Loading.tsx"
+  "file:src/components/dashboard/ChartContainer.tsx" -->|imports| "file:src/components/ui/EmptyState.tsx"
+  "file:src/components/dashboard/ContratosStatusChart.tsx" -->|imports| "file:src/components/dashboard/ChartContainer.tsx"
+  "file:src/components/dashboard/DashboardFilters.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/dashboard/DashboardFilters.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/components/dashboard/DashboardFilters.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/components/dashboard/DashboardShortcuts.tsx" -->|imports| "file:src/config/nav.ts"
+  "file:src/components/dashboard/DashboardShortcuts.tsx" -->|imports| "file:src/lib/dashboard-shortcuts.ts"
+  "file:src/components/dashboard/DashboardShortcuts.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/dashboard/KPICard.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/dashboard/RecebimentosChart.tsx" -->|imports| "file:src/components/dashboard/ChartContainer.tsx"
+  "file:src/components/dashboard/VendedoresChart.tsx" -->|imports| "file:src/components/dashboard/ChartContainer.tsx"
+  "file:src/components/empresas/EmpresaSelector.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/ClientForm.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/components/forms/ClientForm.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/components/forms/ClientForm.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/ClientForm.tsx" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/components/forms/ConviteForm.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/forms/ConviteForm.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/EmpresaForm.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/forms/EmpresaForm.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/ServicoForm.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/components/forms/ServicoForm.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/components/forms/ServicoForm.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/ServicoForm.tsx" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/components/forms/VendedorForm.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/components/forms/VendedorForm.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/components/forms/VendedorForm.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/forms/VendedorForm.tsx" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/components/layout Sidebar.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/components/layout/Sidebar.tsx"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/components/layout/Header.tsx"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/components/layout/MobileBottomNav.tsx"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/services/dashboard-activity-service.ts"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/config/nav.ts"
+  "file:src/components/layout/AppLayout.tsx" -->|imports| "file:src/components/chat/LiveChat.tsx"
+  "file:src/components/layout/Header.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/layout/Header.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/components/layout/Header.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/components/layout/Header.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/components/layout/Header.tsx" -->|imports| "file:src/components/chat/LiveChat.tsx"
+  "file:src/components/layout/MobileBottomNav.tsx" -->|imports| "file:src/config/nav.ts"
+  "file:src/components/layout/MobileBottomNav.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/layout/Sidebar.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/layout/Sidebar.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/components/pwa/InstallPwaButton.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/components/pwa/InstallPwaButton.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/Badge.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/Button.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/Card.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/FileUpload.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/FileUpload.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/components/ui/FloatingThemeSwitcher.tsx" -->|imports| "file:src/contexts/ThemeContext.tsx"
+  "file:src/components/ui/Input.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/Loading.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/Modal.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Card.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/EmptyState.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Loading.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Modal.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/Badge.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/FileUpload.tsx"
+  "file:src/components/ui/index.ts" -->|imports| "file:src/components/ui/PageHeader.tsx"
+  "file:src/components/ui/sonar-grid.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/contexts/AdminAuthContext.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/contexts/AdminAuthContext.tsx" -->|imports| "file:src/lib/admin-auth.ts"
+  "file:src/contexts/AdminAuthContext.tsx" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:src/contexts/AuthContext.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/contexts/AuthContext.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/contexts/AuthContext.tsx" -->|imports| "file:src/lib/permissions.ts"
+  "file:src/contexts/AuthContext.tsx" -->|imports| "file:src/lib/auth-types.ts"
+  "file:src/contexts/AuthContext.tsx" -->|reads-or-writes| "table:empresa_members"
+  "file:src/contexts/AuthContext.tsx" -->|reads-or-writes| "table:profiles"
+  "file:src/contexts/AuthContext.tsx" -->|reads-or-writes| "table:empresas"
+  "file:src/contexts/AuthContext.tsx" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:src/contexts/AuthContext.tsx" -->|calls-rpc| "rpc:is_marketing_member"
+  "file:src/index.css" -->|imports| "file:src/design-system/tokens.css"
+  "file:src/lib/assinatura-store.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/lib/assinatura-store.ts" -->|imports| "file:src/lib/assinatura-types.ts"
+  "file:src/lib/assinatura-store.ts" -->|reads-or-writes| "table:signature_envelopes"
+  "file:src/lib/assinatura-store.ts" -->|calls-rpc| "rpc:get_signature_envelope_by_token"
+  "file:src/lib/assinatura-store.ts" -->|calls-rpc| "rpc:mark_signature_envelope_viewed"
+  "file:src/lib/assinatura-store.ts" -->|calls-rpc| "rpc:apply_signature_to_envelope"
+  "file:src/lib/contrato-calculo.test.ts" -->|imports| "file:src/lib/contrato-calculo.ts"
+  "file:src/lib/contrato-calculo.test.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/lib/contrato-calculo.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/lib/contrato-template.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/lib/contrato-template.ts" -->|imports| "file:src/lib/contrato-calculo.ts"
+  "file:src/lib/contratos-store.test.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/lib/contratos-store.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/lib/contratos-store.ts" -->|reads-or-writes| "table:gm_contracts"
+  "file:src/lib/contratos-store.ts" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:src/lib/contratos-store.ts" -->|calls-rpc| "rpc:empresa_role"
+  "file:src/lib/dashboard-shortcuts.test.ts" -->|imports| "file:src/lib/dashboard-shortcuts.ts"
+  "file:src/lib/dashboard-shortcuts.ts" -->|imports| "file:src/config/nav.ts"
+  "file:src/lib/email-templates.test.ts" -->|imports| "file:src/lib/email-templates.ts"
+  "file:src/lib/vendedor-validation.test.ts" -->|imports| "file:src/lib/vendedor-validation.ts"
+  "file:src/lib/vendor-visit-types.test.ts" -->|imports| "file:src/lib/vendor-visit-types.ts"
+  "file:src/lib/vendor-visit-types.ts" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/main.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/contexts/ThemeContext.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/auth/ProtectedRoute.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/admin/AdminProtectedRoute.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/layout/AppLayout.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/admin/AdminLayout.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/ui/sonar-grid.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/ui/FloatingThemeSwitcher.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/brand/FirstVisitIntro.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/VendedorWorkspace.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Visitas.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/components/layout/GlobalFooter.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/public/LandingPage.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/Login.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/Cadastro.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/AuthCallback.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/RecuperacaoSenha.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/TermosUso.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/auth/Privacidade.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Dashboard.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/DashboardExecutivo.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Clientes.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Contratos.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/ContratoNovo.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Servicos.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Vendedores.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Agenda.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Financeiro.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Relatorios.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Auditoria.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Configuracoes.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Perfil.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Empresas.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/Assinaturas.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/dashboard/AssinaturaDetalhe.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/public/AssinarDocumento.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/marketing/MarketingWorkspace.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminLogin.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminDashboard.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminEmpresas.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminUsuarios.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminArquivos.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminSistema.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminAuditoria.tsx"
+  "file:src/main.tsx" -->|imports| "file:src/pages/admin/AdminSeguranca.tsx"
+  "file:src/main.tsx" -->|route:/| "file:src/pages/public/LandingPage.tsx"
+  "file:src/main.tsx" -->|route:/auth| "file:src/pages/auth/Login.tsx"
+  "file:src/main.tsx" -->|route:/login| "file:src/pages/auth/Login.tsx"
+  "file:src/main.tsx" -->|route:/cadastro| "file:src/pages/auth/Cadastro.tsx"
+  "file:src/main.tsx" -->|route:/auth/callback| "file:src/pages/auth/AuthCallback.tsx"
+  "file:src/main.tsx" -->|route:/recuperar-senha| "file:src/pages/auth/RecuperacaoSenha.tsx"
+  "file:src/main.tsx" -->|route:/termos| "file:src/pages/auth/TermosUso.tsx"
+  "file:src/main.tsx" -->|route:/privacidade| "file:src/pages/auth/Privacidade.tsx"
+  "file:src/main.tsx" -->|route:/assinar/:token| "file:src/pages/public/AssinarDocumento.tsx"
+  "file:src/main.tsx" -->|route:/admin/login| "file:src/pages/admin/AdminLogin.tsx"
+  "file:src/main.tsx" -->|route:/admin| "file:src/components/admin/AdminLayout.tsx"
+  "file:src/main.tsx" -->|route:empresas| "file:src/pages/admin/AdminEmpresas.tsx"
+  "file:src/main.tsx" -->|route:usuarios| "file:src/pages/admin/AdminUsuarios.tsx"
+  "file:src/main.tsx" -->|route:clientes| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/main.tsx" -->|route:contratos| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/main.tsx" -->|route:assinaturas| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/main.tsx" -->|route:arquivos| "file:src/pages/admin/AdminArquivos.tsx"
+  "file:src/main.tsx" -->|route:financeiro| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/main.tsx" -->|route:sistema| "file:src/pages/admin/AdminSistema.tsx"
+  "file:src/main.tsx" -->|route:auditoria| "file:src/pages/admin/AdminAuditoria.tsx"
+  "file:src/main.tsx" -->|route:seguranca| "file:src/pages/admin/AdminSeguranca.tsx"
+  "file:src/main.tsx" -->|route:/vendedor| "file:src/pages/dashboard/VendedorWorkspace.tsx"
+  "file:src/main.tsx" -->|route:/dashboard| "file:src/pages/dashboard/Dashboard.tsx"
+  "file:src/main.tsx" -->|route:/dashboard/executivo| "file:src/pages/dashboard/DashboardExecutivo.tsx"
+  "file:src/main.tsx" -->|route:/clientes| "file:src/pages/dashboard/Clientes.tsx"
+  "file:src/main.tsx" -->|route:/clients| "file:src/pages/dashboard/Clientes.tsx"
+  "file:src/main.tsx" -->|route:/contratos| "file:src/pages/dashboard/Contratos.tsx"
+  "file:src/main.tsx" -->|route:/contratos/novo| "file:src/pages/dashboard/ContratoNovo.tsx"
+  "file:src/main.tsx" -->|route:/assinaturas| "file:src/pages/dashboard/Assinaturas.tsx"
+  "file:src/main.tsx" -->|route:/assinaturas/:id| "file:src/pages/dashboard/AssinaturaDetalhe.tsx"
+  "file:src/main.tsx" -->|route:/servicos| "file:src/pages/dashboard/Servicos.tsx"
+  "file:src/main.tsx" -->|route:/vendedores| "file:src/pages/dashboard/Vendedores.tsx"
+  "file:src/main.tsx" -->|route:/agenda| "file:src/pages/dashboard/Agenda.tsx"
+  "file:src/main.tsx" -->|route:/visitas| "file:src/pages/dashboard/Visitas.tsx"
+  "file:src/main.tsx" -->|route:/financeiro| "file:src/pages/dashboard/Financeiro.tsx"
+  "file:src/main.tsx" -->|route:/relatorios| "file:src/pages/dashboard/Relatorios.tsx"
+  "file:src/main.tsx" -->|route:/auditoria| "file:src/pages/dashboard/Auditoria.tsx"
+  "file:src/main.tsx" -->|route:/configuracoes| "file:src/pages/dashboard/Configuracoes.tsx"
+  "file:src/main.tsx" -->|route:/perfil| "file:src/pages/dashboard/Perfil.tsx"
+  "file:src/main.tsx" -->|route:/empresas| "file:src/pages/dashboard/Empresas.tsx"
+  "file:src/main.tsx" -->|route:/marketing| "file:src/pages/marketing/MarketingWorkspace.tsx"
+  "file:src/pages/admin/AdminArquivos.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminArquivos.tsx" -->|imports| "file:src/services/admin-file-service.ts"
+  "file:src/pages/admin/AdminArquivos.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminArquivos.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/admin/AdminArquivos.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/admin/AdminAuditoria.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminAuditoria.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminAuditoria.tsx" -->|imports| "file:src/services/admin-audit-service.ts"
+  "file:src/pages/admin/AdminAuditoria.tsx" -->|imports| "file:src/repositories/admin-audit-repository.ts"
+  "file:src/pages/admin/AdminDashboard.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminDashboard.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminEmpresas.tsx" -->|imports| "file:src/pages/admin/AdminRecursos.tsx"
+  "file:src/pages/admin/AdminLogin.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminLogin.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminLogin.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/services/admin-resource-service.ts"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/lib/contrato-template.ts"
+  "file:src/pages/admin/AdminRecursos.tsx" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/pages/admin/AdminSeguranca.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminSeguranca.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/services/admin-system-backup-service.ts"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/services/admin-hosting-migration-service.ts"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/services/admin-smtp-service.ts"
+  "file:src/pages/admin/AdminSistema.tsx" -->|imports| "file:src/lib/email-templates.ts"
+  "file:src/pages/admin/AdminUsuarios.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/admin/AdminUsuarios.tsx" -->|imports| "file:src/services/admin-user-service.ts"
+  "file:src/pages/admin/AdminUsuarios.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/admin/AdminUsuarios.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/admin/AdminUsuarios.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/auth/AuthCallback.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/auth/AuthCallback.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/AuthCallback.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/auth/Cadastre.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/components/auth/GoogleButton.tsx"
+  "file:src/pages/auth/Cadastro.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/components/auth/GoogleButton.tsx"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/components/pwa/InstallPwaButton.tsx"
+  "file:src/pages/auth/Login.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/auth/Privacidade.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/Privacidade.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/pages/auth/RecuperacaoSenha.tsx" -->|imports| "file:src/components/ui/Button.tsx"
+  "file:src/pages/auth/RecuperacaoSenha.tsx" -->|imports| "file:src/components/ui/Input.tsx"
+  "file:src/pages/auth/RecuperacaoSenha.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/auth/RecuperaçãoSenha.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/TermosUso.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/auth/TermosUso.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/pages/dashboard/Agenda.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Agenda.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/Agenda.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Agenda.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Agenda.tsx" -->|reads-or-writes| "table:agenda"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/lib/assinatura-store.ts"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/pages/dashboard/AssinaturaDetalhe.tsx" -->|imports| "file:src/lib/assinatura-types.ts"
+  "file:src/pages/dashboard/Assinaturas.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Assinaturas.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Assinaturas.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Assinaturas.tsx" -->|imports| "file:src/lib/assinatura-store.ts"
+  "file:src/pages/dashboard/Assinaturas.tsx" -->|imports| "file:src/lib/assinatura-types.ts"
+  "file:src/pages/dashboard/Auditoria.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/services/client-service.ts"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Clientes.tsx" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/pages/dashboard/Configuracoes.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Configuracoes.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Configuracoes.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/Configuracoes.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Configuracoes.tsx" -->|reads-or-writes| "table:empresas"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/lib/utils.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/lib/contrato-calculo.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/services/contrato-wizard-data.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/lib/assinatura-store.ts"
+  "file:src/pages/dashboard/ContratoNovo.tsx" -->|imports| "file:src/lib/contrato-template.ts"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Contratos.tsx" -->|imports| "file:src/lib/contrato-template.ts"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/components/pwa/InstallPwaButton.tsx"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/services/dashboard-activity-service.ts"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/services/dashboard-overview-service.ts"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Dashboard.tsx" -->|imports| "file:src/components/dashboard/DashboardShortcuts.tsx"
+  "file:src/pages/dashboard/DashboardExecutivo.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/DashboardExecutivo.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Empresas.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Empresas.tsx" -->|imports| "file:src/components/forms/EmpresaForm.tsx"
+  "file:src/pages/dashboard/Empresas.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Empresas.tsx" -->|imports| "file:src/services/empresa-service.ts"
+  "file:src/pages/dashboard/Empresas.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Financeiro.tsx" -->|reads-or-writes| "table:gm_financial_entries"
+  "file:src/pages/dashboard/Perfil.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Perfil.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Relatorios.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Relatorios.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/services/servico-catalogo-persistente.ts"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Servicos.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/components/pwa/InstallPwaButton.tsx"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/lib/vendor-visit-types.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/repositories/vendor-visit-repository.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|imports| "file:src/services/vendor-visit-service.ts"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|reads-or-writes| "table:vendedores"
+  "file:src/pages/dashboard/VendedorWorkspace.tsx" -->|reads-or-writes| "table:agenda"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/components/admin/AdminAccordionList.tsx"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/hooks/useAdminHiddenRecords.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/lib/export.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/contexts/AdminAuthContext.tsx"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/services/file-storage.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|imports| "file:src/lib/vendedor-validation.ts"
+  "file:src/pages/dashboard/Vendedores.tsx" -->|reads-or-writes| "table:vendedores"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/lib/vendor-visit-types.ts"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/repositories/vendor-visit-repository.ts"
+  "file:src/pages/dashboard/Visitas.tsx" -->|imports| "file:src/services/vendor-visit-service.ts"
+  "file:src/pages/dashboard/Visitas.tsx" -->|reads-or-writes| "table:clients"
+  "file:src/pages/dashboard/Visitas.tsx" -->|reads-or-writes| "table:vendedores"
+  "file:src/pages/dashboard/Visitas.tsx" -->|reads-or-writes| "table:vendedor_visitas"
+  "file:src/pages/marketing/MarketingWorkspace.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/marketing/MarketingWorkspace.tsx" -->|imports| "file:src/contexts/AuthContext.tsx"
+  "file:src/pages/marketing/MarketingWorkspace.tsx" -->|imports| "file:src/services/marketing-service.ts"
+  "file:src/pages/public/AssinarDocumento.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/public/AssinarDocumento.tsx" -->|imports| "file:src/components/assinatura/SignaturePad.tsx"
+  "file:src/pages/public/AssinarDocumento.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/public/AssinarDocumento.tsx" -->|imports| "file:src/lib/assinatura-store.ts"
+  "file:src/pages/public/AssinarDocumento.tsx" -->|imports| "file:src/lib/assinatura-types.ts"
+  "file:src/pages/public/LandingPage.tsx" -->|imports| "file:src/components/ui/index.ts"
+  "file:src/pages/public/LandingPage.tsx" -->|imports| "file:src/lib/brand.ts"
+  "file:src/pages/public/LandingPage.tsx" -->|imports| "file:src/components/brand/BrandLogo.tsx"
+  "file:src/pages/public/LandingPage.tsx" -->|imports| "file:src/components/pwa/InstallPwaButton.tsx"
+  "file:src/repositories/admin-audit-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/admin-audit-repository.ts" -->|calls-rpc| "rpc:admin_list_audit"
+  "file:src/repositories/agenda-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/agenda-repository.ts" -->|imports| "file:src/lib/agenda-types.ts"
+  "file:src/repositories/agenda-repository.ts" -->|imports| "file:src/lib/contrato-types.ts"
+  "file:src/repositories/agenda-repository.ts" -->|reads-or-writes| "table:agenda"
+  "file:src/repositories/agenda-repository.ts" -->|reads-or-writes| "table:agenda_historico"
+  "file:src/repositories/client-repository.test.ts" -->|imports| "file:src/repositories/client-repository.ts"
+  "file:src/repositories/client-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/client-repository.ts" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/repositories/client-repository.ts" -->|reads-or-writes| "table:clients"
+  "file:src/repositories/client-repository.ts" -->|reads-or-writes| "table:client_historico"
+  "file:src/repositories/empresa-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/empresa-repository.ts" -->|imports| "file:src/lib/empresa-types.ts"
+  "file:src/repositories/empresa-repository.ts" -->|reads-or-writes| "table:empresas"
+  "file:src/repositories/empresa-repository.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:src/repositories/empresa-repository.ts" -->|reads-or-writes| "table:convites"
+  "file:src/repositories/servico-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/servico-repository.ts" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/repositories/servico-repository.ts" -->|imports| "file:src/lib/contrato-types.ts"
+  "file:src/repositories/servico-repository.ts" -->|reads-or-writes| "table:services"
+  "file:src/repositories/vendedor-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/vendedor-repository.ts" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/repositories/vendedor-repository.ts" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/repositories/vendedor-repository.ts" -->|reads-or-writes| "table:vendedores"
+  "file:src/repositories/vendedor-repository.ts" -->|reads-or-writes| "table:vendedor_desempenho"
+  "file:src/repositories/vendedor-repository.ts" -->|reads-or-writes| "table:comissoes"
+  "file:src/repositories/vendor-visit-repository.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/repositories/vendor-visit-repository.ts" -->|imports| "file:src/lib/vendor-visit-types.ts"
+  "file:src/repositories/vendor-visit-repository.ts" -->|reads-or-writes| "table:vendedor_visitas"
+  "file:src/routes/ProtectedRoute.tsx" -->|imports| "file:src/components/auth/ProtectedRoute.tsx"
+  "file:src/services/admin-audit-service.ts" -->|imports| "file:src/repositories/admin-audit-repository.ts"
+  "file:src/services/admin-file-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/admin-file-service.ts" -->|imports| "file:src/services/admin-resource-service.ts"
+  "file:src/services/admin-file-service.ts" -->|reads-or-writes| "table:gm_files"
+  "file:src/services/admin-file-service.ts" -->|calls-rpc| "rpc:admin_log_event"
+  "file:src/services/admin-hosting-migration-service.test.ts" -->|imports| "file:src/services/admin-hosting-migration-service.ts"
+  "file:src/services/admin-hosting-migration-service.ts" -->|imports| "file:src/services/admin-resource-service.ts"
+  "file:src/services/admin-hosting-migration-service.ts" -->|imports| "file:src/services/admin-system-backup-service.ts"
+  "file:src/services/admin-resource-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/admin-resource-service.ts" -->|reads-or-writes| "table:empresas"
+  "file:src/services/admin-resource-service.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:src/services/admin-resource-service.ts" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:src/services/admin-resource-service.ts" -->|calls-rpc| "rpc:admin_log_event"
+  "file:src/services/admin-smtp-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/admin-smtp-service.ts" -->|imports| "file:src/lib/email-templates.ts"
+  "file:src/services/admin-system-backup-service.test.ts" -->|imports| "file:src/services/admin-system-backup-service.ts"
+  "file:src/services/admin-system-backup-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/admin-system-backup-service.ts" -->|imports| "file:src/services/admin-resource-service.ts"
+  "file:src/services/admin-system-backup-service.ts" -->|calls-rpc| "rpc:admin_restore_system_backup"
+  "file:src/services/admin-system-backup-service.ts" -->|calls-rpc| "rpc:admin_clear_operational_data"
+  "file:src/services/admin-user-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/admin-user-service.ts" -->|reads-or-writes| "table:profiles"
+  "file:src/services/admin-user-service.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:src/services/admin-user-service.ts" -->|reads-or-writes| "table:empresas"
+  "file:src/services/admin-user-service.ts" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:src/services/admin-user-service.ts" -->|calls-rpc| "rpc:admin_log_event"
+  "file:src/services/client-service.test.ts" -->|imports| "file:src/services/client-service.ts"
+  "file:src/services/client-service.ts" -->|imports| "file:src/repositories/client-repository.ts"
+  "file:src/services/client-service.ts" -->|imports| "file:src/lib/client-types.ts"
+  "file:src/services/client-service.ts" -->|imports| "file:src/lib/permissions.ts"
+  "file:src/services/contrato-wizard-data.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/contrato-wizard-data.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/services/contrato-wizard-data.ts" -->|imports| "file:src/services/servico-catalogo-persistente.ts"
+  "file:src/services/contrato-wizard-data.ts" -->|reads-or-writes| "table:clients"
+  "file:src/services/dashboard-activity-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/dashboard-activity-service.ts" -->|reads-or-writes| "table:auditoria"
+  "file:src/services/dashboard-activity-service.ts" -->|reads-or-writes| "table:profiles"
+  "file:src/services/dashboard-overview-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/dashboard-overview-service.ts" -->|reads-or-writes| "table:clients"
+  "file:src/services/dashboard-overview-service.ts" -->|reads-or-writes| "table:contratos"
+  "file:src/services/dashboard-overview-service.ts" -->|reads-or-writes| "table:parcelas"
+  "file:src/services/dashboard-overview-service.ts" -->|reads-or-writes| "table:gm_financial_entries"
+  "file:src/services/empresa-service.ts" -->|imports| "file:src/repositories/empresa-repository.ts"
+  "file:src/services/empresa-service.ts" -->|imports| "file:src/lib/empresa-types.ts"
+  "file:src/services/empresa-service.ts" -->|imports| "file:src/lib/permissions.ts"
+  "file:src/services/empresa-service.ts" -->|reads-or-writes| "table:empresas"
+  "file:src/services/file-storage.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/file-storage.ts" -->|reads-or-writes| "table:gm_files"
+  "file:src/services/marketing-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_members"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_projects"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_tasks"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_project_members"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_notifications"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_milestones"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_task_comments"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_approvals"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_events"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_files"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_briefs"
+  "file:src/services/marketing-service.ts" -->|reads-or-writes| "table:marketing_messages"
+  "file:src/services/marketing-service.ts" -->|calls-rpc| "rpc:is_marketing_member"
+  "file:src/services/marketing-service.ts" -->|calls-rpc| "rpc:marketing_has_permission"
+  "file:src/services/marketing-service.ts" -->|calls-rpc| "rpc:marketing_open_project_conversation"
+  "file:src/services/marketing-service.ts" -->|calls-rpc| "rpc:marketing_available_users"
+  "file:src/services/servico-catalogo-persistente.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/servico-catalogo-persistente.ts" -->|imports| "file:src/lib/contratos-store.ts"
+  "file:src/services/servico-catalogo-persistente.ts" -->|reads-or-writes| "table:services"
+  "file:src/services/servico-service.ts" -->|imports| "file:src/repositories/servico-repository.ts"
+  "file:src/services/servico-service.ts" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/services/servico-service.ts" -->|imports| "file:src/lib/permissions.ts"
+  "file:src/services/vendedor-service.ts" -->|imports| "file:src/repositories/vendedor-repository.ts"
+  "file:src/services/vendedor-service.ts" -->|imports| "file:src/lib/servico-types.ts"
+  "file:src/services/vendedor-service.ts" -->|imports| "file:src/lib/permissions.ts"
+  "file:src/services/vendor-chat-service.ts" -->|imports| "file:src/lib/supabase/client.ts"
+  "file:src/services/vendor-visit-service.ts" -->|imports| "file:src/repositories/vendor-visit-repository.ts"
+  "file:src/services/vendor-visit-service.ts" -->|imports| "file:src/lib/vendor-visit-types.ts"
+  "file:src/test/InstallPwaButton.test.tsx" -->|imports| "file:src/components/pwa/InstallPwaButton.tsx"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:platform_admins"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:gm_files"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:profiles"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:vendedores"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:gm_vendor_activation_events"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:gm_admin_audit"
+  "file:supabase/functions/admin-users/index.ts" -->|reads-or-writes| "table:empresas"
+  "file:supabase/functions/get-signature-attachment/index.ts" -->|reads-or-writes| "table:gm_files"
+  "file:supabase/functions/get-signature-attachment/index.ts" -->|calls-rpc| "rpc:get_signature_attachment_by_token"
+  "file:supabase/functions/marketing-invite/index.ts" -->|reads-or-writes| "table:marketing_members"
+  "file:supabase/functions/marketing-invite/index.ts" -->|calls-rpc| "rpc:marketing_has_permission"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|imports| "file:src/lib/email-templates.ts"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:gm_smtp_settings"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:gm_email_templates"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:gm_smtp_mail_log"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:vendedores"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:empresas"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:gm_vendor_activation_events"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:profiles"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|reads-or-writes| "table:signature_envelopes"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|calls-rpc| "rpc:is_platform_admin"
+  "file:supabase/functions/smtp-mailer/index.ts" -->|calls-rpc| "rpc:admin_log_event"
+  "file:supabase/functions/vendor-chat/index.ts" -->|reads-or-writes| "table:empresa_members"
+  "file:supabase/functions/vendor-chat/index.ts" -->|reads-or-writes| "table:vendedores"
+  "file:supabase/functions/vendor-chat/index.ts" -->|reads-or-writes| "table:gm_files"
+  "file:supabase/functions/vendor-chat/index.ts" -->|reads-or-writes| "table:gm_chat_messages"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:profiles"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:empresas"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:empresa_members"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:convites"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:clients"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:client_historico"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:services"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:vendedores"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:comissoes"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:vendedor_desempenho"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:contratos"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:assinaturas"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:contrato_historico"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:parcelas"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:lancamentos"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:estornos"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:agenda"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:agenda_historico"
+  "file:supabase/migrations/20261021000000_init_schema.sql" -->|defines-table| "table:auditoria"
+  "file:supabase/migrations/20261021010000_assinaturas.sql" -->|defines-table| "table:signature_envelopes"
+  "file:supabase/migrations/20261021010000_assinaturas.sql" -->|defines-table| "table:signature_signers"
+  "file:supabase/migrations/20261021010000_assinaturas.sql" -->|defines-table| "table:signature_events"
+  "file:supabase/migrations/20261021130000_security_hardening.sql" -->|defines-table| "table:platform_admins"
+  "file:supabase/migrations/20261021144232_server_files_and_contract_records.sql" -->|defines-table| "table:gm_files"
+  "file:supabase/migrations/20261021144232_server_files_and_contract_records.sql" -->|defines-table| "table:gm_contracts"
+  "file:supabase/migrations/20261021170000_persistent_signature_envelopes.sql" -->|defines-table| "table:signature_envelopes"
+  "file:supabase/migrations/20261021170529_persistent_workspace_data.sql" -->|defines-table| "table:gm_financial_entries"
+  "file:supabase/migrations/20261021171000_admin_console_and_audit.sql" -->|defines-table| "table:gm_admin_audit"
+  "file:supabase/migrations/20261022010000_harden_profile_roles.sql" -->|defines-table| "table:platform_admins"
+  "file:supabase/migrations/20261023040000_smtp_mailer_settings.sql" -->|defines-table| "table:gm_smtp_settings"
+  "file:supabase/migrations/20261023040000_smtp_mailer_settings.sql" -->|defines-table| "table:gm_smtp_mail_log"
+  "file:supabase/migrations/20261023044825_vendor_activation_email_tracking.sql" -->|defines-table| "table:gm_vendor_activation_events"
+  "file:supabase/migrations/20261023050243_vendedor_empresa_chat.sql" -->|defines-table| "table:gm_chat_messages"
+  "file:supabase/migrations/20261023054301_vendedor_visitas.sql" -->|defines-table| "table:vendedor_visitas"
+  "file:supabase/migrations/20261023090501_admin_email_templates.sql" -->|defines-table| "table:gm_email_templates"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_members"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_projects"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_project_members"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_briefs"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_tasks"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_task_dependencies"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_task_comments"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_milestones"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_conversations"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_conversation_members"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_messages"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_files"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_approvals"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_events"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_notifications"
+  "file:supabase/migrations/20261024180000_marketing_operations.sql" -->|defines-table| "table:marketing_push_subscriptions"</pre><script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'strict'});</script></body></html>

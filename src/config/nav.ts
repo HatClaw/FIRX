@@ -1,0 +1,36 @@
+import {
+  BarChart3,
+  Building2,
+  Briefcase,
+  Calendar,
+  FileSignature,
+  FileText,
+  LayoutDashboard,
+  MapPin,
+  Megaphone,
+  Settings,
+  Shield,
+  TrendingUp,
+  Users,
+  Wallet,
+} from 'lucide-react';
+
+export const navItems = [
+  { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { label: 'Executivo', href: '/dashboard/executivo', icon: TrendingUp },
+  { label: 'Empresas', href: '/empresas', icon: Building2 },
+  { label: 'Clientes', href: '/clientes', icon: Users },
+  { label: 'Contratos', href: '/contratos', icon: FileText },
+  { label: 'Assinaturas', href: '/assinaturas', icon: FileSignature },
+  { label: 'Serviços', href: '/servicos', icon: Briefcase },
+  { label: 'Vendedores', href: '/vendedores', icon: Users },
+  { label: 'Agenda', href: '/agenda', icon: Calendar },
+  { label: 'Visitas', href: '/visitas', icon: MapPin },
+  { label: 'Financeiro', href: '/financeiro', icon: Wallet },
+  { label: 'Relatórios', href: '/relatorios', icon: BarChart3 },
+  { label: 'Equipe de Marketing', href: '/marketing', icon: Megaphone },
+  { label: 'Auditoria', href: '/auditoria', icon: Shield },
+  { label: 'Configurações', href: '/configuracoes', icon: Settings },
+  { label: 'Perfil', href: '/perfil', icon: Users },
+];
+

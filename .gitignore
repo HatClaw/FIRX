@@ -1,0 +1,28 @@
+# Build artifacts
+dist/
+node_modules/
+# Environments
+.env
+.env.local
+.env.development
+.env.production
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+# OS
+.DS_Store
+Thumbs.db
+# Test coverage
+coverage/
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Supabase
+.supabase/
+supabase/.temp/
+public/api/smtp-config.php
+

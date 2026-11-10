@@ -1,0 +1,16 @@
+<IfModule mod_authz_core.c>
+  <Files "smtp-config.php">
+    Require all denied
+  </Files>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+  <Files "smtp-config.php">
+    Order allow,deny
+    Deny from all
+  </Files>
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-store"
+</IfModule>

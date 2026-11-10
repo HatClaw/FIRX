@@ -1,0 +1,51 @@
+:root {
+  --brand: #ff6a00;
+  --brand-light: #ff9a52;
+  --brand-dark: #c2410c;
+  --brand-contrast: #a33b05;
+  --brand-hover: #e85d04;
+  --brand-glow: rgba(255, 106, 0, 0.38);
+  --color-erro: #ef4444;
+  --color-aviso: #f59e0b;
+  --color-sucesso: #ff6a00;
+  --color-informacao: #3b82f6;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f6f9;
+  --bg-tertiary: #eef1f6;
+  --bg-elevated: #ffffff;
+  --text-primary: #0b1220;
+  --text-secondary: #5b6b7c;
+  --text-disabled: #94a3b8;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 28px 56px rgba(15, 23, 42, 0.14);
+  --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --nav-height: 4rem;
+  --header-height: 4.5rem;
+}
+[data-theme="dark"] {
+  --brand-contrast: #ff9a52;
+  --brand-hover: #e85d04;
+  --bg-primary: #0b1220;
+  --bg-secondary: #080d16;
+  --bg-tertiary: #151c2c;
+  --bg-elevated: #111827;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-disabled: #64748b;
+  --border-color: rgba(148, 163, 184, 0.12);
+}
+
