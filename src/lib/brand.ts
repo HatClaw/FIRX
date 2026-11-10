@@ -1,13 +1,13 @@
-/** Identidade oficial Grow Money Digital */
+/** Identidade oficial firx */
 export const BRAND = {
-  name: 'Grow Money Digital',
-  shortName: 'GROW',
-  product: 'Grow Software',
+  name: 'firx',
+  shortName: 'firx',
+  product: 'firx Software',
   tagline: 'Gestão financeira inteligente para empresas que crescem',
-  logo: `${import.meta.env.BASE_URL}logo-grow.svg`,
-  logoUrl: `${import.meta.env.BASE_URL}logo-grow.svg`,
-  logoLight: `${import.meta.env.BASE_URL}assets/grow-logo-black.png`,
-  site: 'https://growmoneydigital.com.br',
+  logo: `${import.meta.env.BASE_URL}logo-firx.svg`,
+  logoUrl: `${import.meta.env.BASE_URL}logo-firx.svg`,
+  logoLight: `${import.meta.env.BASE_URL}logo-firx-dark.svg`,
+  site: 'https://agenciaafrica.com.br/firx',
   colors: {
     primary: '#ff6a00',
     primaryDark: '#c2410c',
@@ -15,4 +15,3 @@ export const BRAND = {
     surface: '#111827',
   },
 } as const;
-

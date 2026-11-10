@@ -10,7 +10,7 @@ export default function RecuperaçãoSenha() {
     <div className="min-h-screen flex items-center justify-center bg-bg-secondary p-4">
       <Card className="w-full max-w-md p-6">
         <div className="text-center mb-6">
-          <h1 className="text-2xl font-bold text-verde-discreto">GrowMoney</h1>
+          <h1 className="text-2xl font-bold text-verde-discreto">firx</h1>
           <p className="text-text-secondary">Recuperar senha</p>
         </div>
         <form className="space-y-4">

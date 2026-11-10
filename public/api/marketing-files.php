@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 $configPath = dirname(__DIR__, 3) . '/marketing-config.php';
 $config = is_file($configPath) ? require $configPath : null;
-$allowedOrigins = is_array($config) && is_array($config['allowed_origins'] ?? null) ? $config['allowed_origins'] : ['https://canal360.run.place'];
+$allowedOrigins = is_array($config) && is_array($config['allowed_origins'] ?? null) ? $config['allowed_origins'] : ['https://agenciaafrica.com.br', 'https://app.agenciaafrica.com.br', 'https://canal360.run.place'];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin && in_array($origin, $allowedOrigins, true)) {
     header('Access-Control-Allow-Origin: ' . $origin);

@@ -122,7 +122,7 @@ export default function Cadastro() {
         {perfil === 'cliente' && <div className="space-y-4 rounded-2xl border border-border-color bg-bg-secondary/60 p-5 text-center">
           <UserRound className="mx-auto h-8 w-8 text-brand" aria-hidden="true" />
           <h2 className="text-lg font-semibold">Acesso de cliente</h2>
-          <p className="text-sm text-text-secondary">Para proteger seus documentos, o acesso é feito pelo link individual enviado pela empresa. Abra o link recebido para visualizar ou assinar; não é necessário criar uma conta GrowMoney.</p>
+          <p className="text-sm text-text-secondary">Para proteger seus documentos, o acesso é feito pelo link individual enviado pela empresa. Abra o link recebido para visualizar ou assinar; não é necessário criar uma conta firx.</p>
           <Link to="/auth" className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-border-color px-4 text-sm font-semibold text-brand hover:bg-brand/5">Já tenho uma conta <ArrowRight className="h-4 w-4" /></Link>
         </div>}
 

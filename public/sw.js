@@ -1,6 +1,6 @@
 // Bump this value whenever the app shell changes so installed PWAs discard
 // stale cached assets and load the current branding and interface.
-const CACHE = 'grow-v5';
+const CACHE = 'firx-v1';
 const APP_BASE = new URL(self.registration.scope).pathname;
 const shell = [APP_BASE, `${APP_BASE}index.html`, `${APP_BASE}manifest.webmanifest`, `${APP_BASE}assets/pwa-icon.svg`];
 
@@ -11,7 +11,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('grow-') && key !== CACHE).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => (key.startsWith('firx-') || key.startsWith('grow-')) && key !== CACHE).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });

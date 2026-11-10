@@ -4,7 +4,7 @@
 
 ### Opção A — SQL Editor (mais simples)
 
-1. Abra o projeto: https://supabase.com/dashboard/project/qgzplvrpzjqhqpbtszxs
+1. Abra o projeto: https://supabase.com/dashboard/project/kwpqfsklwovlibqyiunl
 2. Vá em **SQL Editor** → New query
 3. Cole o conteúdo de `migrations/20261021000000_init_schema.sql`
 4. Clique **Run**
@@ -12,14 +12,14 @@
 ### Opção B — CLI
 
 ```bash
-npx supabase link --project-ref qgzplvrpzjqhqpbtszxs
+npx supabase link --project-ref kwpqfsklwovlibqyiunl
 npx supabase db push
 ```
 
 ## Variáveis de ambiente (frontend)
 
 ```env
-VITE_SUPABASE_URL=https://qgzplvrpzjqhqpbtszxs.supabase.co
+VITE_SUPABASE_URL=https://kwpqfsklwovlibqyiunl.supabase.co
 VITE_SUPABASE_ANON_KEY=<sua-anon-key>
 ```
 

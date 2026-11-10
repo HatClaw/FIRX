@@ -45,7 +45,7 @@ const shell = (content: string) => `<!doctype html>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="x-apple-disable-message-reformatting">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>GrowMoney</title>
+  <title>firx</title>
   <style>
     html,body{width:100%!important;margin:0!important;padding:0!important}
     table{border-collapse:collapse!important;border-spacing:0!important}
@@ -77,7 +77,7 @@ const shell = (content: string) => `<!doctype html>
             R Sete Barras, 257, Box 254 · Nossa Senhora do Ó<br>
             São Paulo/SP · CEP 02.927-080<br>
             <a href="mailto:RENATOARANTESDIGITAL@GMAIL.COM" style="color:#c65300;text-decoration:underline">RENATOARANTESDIGITAL@GMAIL.COM</a> · (62) 8594-3333<br>
-            <span style="display:block;margin-top:8px">Mensagem enviada pelo sistema GrowMoney.</span>
+            <span style="display:block;margin-top:8px">Mensagem enviada pelo sistema firx.</span>
           </td></tr>
         </table>
         <!--[if mso]></td></tr></table><![endif]-->
@@ -89,7 +89,7 @@ const shell = (content: string) => `<!doctype html>
 
 export const DEFAULT_EMAIL_TEMPLATES: Record<EmailTemplateKey, EmailTemplate> = {
   vendor_activation: {
-    subject: 'Ative seu acesso ao GrowMoney',
+    subject: 'Ative seu acesso ao firx',
     html: shell(`<h1 style="font-size:22px;margin:0 0 16px;color:#17202a">Ative seu cadastro</h1>
       <p style="font-size:15px;line-height:1.6;margin:0 0 24px">Olá {{nome}}. Seu acesso de vendedor para {{empresa}} está quase pronto. Confirme seu e-mail e defina sua senha para ativar a conta.</p>
       <p style="margin:0 0 20px"><a href="{{link}}" style="display:inline-block;background:#ff6a00;color:#fff;text-decoration:none;font-weight:bold;padding:14px 22px;border-radius:8px">Ativar e definir senha</a></p>
@@ -113,7 +113,7 @@ export const DEFAULT_EMAIL_TEMPLATES: Record<EmailTemplateKey, EmailTemplate> = 
       <p style="font-size:12px;line-height:1.5;color:#68717d;margin:0">Se você não esperava este e-mail, entre em contato com quem enviou o documento.</p>`),
   },
   test_email: {
-    subject: 'Teste de envio — GrowMoney',
+    subject: 'Teste de envio — firx',
     html: shell(`<h1 style="font-size:22px;margin:0 0 16px">Teste de envio realizado</h1>
       <p style="font-size:15px;line-height:1.6;margin:0 0 16px">Este é um e-mail de validação do sistema.</p>
       <p style="font-size:15px;line-height:1.7;margin:0">O servidor SMTP está conectado e o envio de mensagens foi confirmado.</p>`),

@@ -47,7 +47,7 @@ export default function Empresas() {
             <Button variant="outline" size="sm" leftIcon={<Download className="h-4 w-4" />} onClick={() => exportCsv('empresas', filtered.map((empresa) => ({ Nome: empresa.nome, CNPJ: empresa.cnpj || '' })))}>
               CSV
             </Button>
-            <Button variant="outline" size="sm" leftIcon={<FileText className="h-4 w-4" />} onClick={() => exportPdf('Empresas — Grow Money', `<table><thead><tr><th>Nome</th><th>CNPJ</th></tr></thead><tbody>${filtered.map((empresa) => `<tr><td>${empresa.nome}</td><td>${empresa.cnpj || ''}</td></tr>`).join('')}</tbody></table>`)}>
+            <Button variant="outline" size="sm" leftIcon={<FileText className="h-4 w-4" />} onClick={() => exportPdf('Empresas — firx', `<table><thead><tr><th>Nome</th><th>CNPJ</th></tr></thead><tbody>${filtered.map((empresa) => `<tr><td>${empresa.nome}</td><td>${empresa.cnpj || ''}</td></tr>`).join('')}</tbody></table>`)}>
               PDF
             </Button>
             <Button size="sm" leftIcon={<Plus className="h-4 w-4" />} onClick={() => setOpen(true)}>

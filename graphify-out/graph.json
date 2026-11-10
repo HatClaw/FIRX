@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generator": "growmoney-project-graph",
-  "generated_at": "2026-11-10T00:05:06.073Z",
+  "generated_at": "2026-11-10T00:29:34.082Z",
   "scope": "src, supabase, docs, public source and static assets, project configuration",
   "nodes": [
     {
@@ -58,6 +58,16 @@
       "id": "file:public/assets/pwa-icon.svg",
       "type": "file",
       "label": "public/assets/pwa-icon.svg"
+    },
+    {
+      "id": "file:public/logo-firx-dark.svg",
+      "type": "file",
+      "label": "public/logo-firx-dark.svg"
+    },
+    {
+      "id": "file:public/logo-firx.svg",
+      "type": "file",
+      "label": "public/logo-firx.svg"
     },
     {
       "id": "file:public/logo-grow-dark.svg",

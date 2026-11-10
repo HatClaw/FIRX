@@ -3,11 +3,6 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import fs from 'node:fs';
 
-// Para cPanel em https://canal360.run.place/grow use:
-//   VITE_BASE=/grow/ npm run build
-// Para raiz (Netlify etc.):
-//   npm run build  (padrão /)
-const base = process.env.VITE_BASE || '/';
 
 function listPublicFiles(directory: string, prefix = ''): string[] {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -17,7 +12,7 @@ function listPublicFiles(directory: string, prefix = ''): string[] {
   });
 }
 
-function cpanelMigrationManifest(): Plugin {
+function cpanelMigrationManifest(base: string): Plugin {
   return {
     name: 'cpanel-migration-manifest',
     generateBundle(_options, bundle: OutputBundle) {
@@ -40,14 +35,21 @@ function cpanelMigrationManifest(): Plugin {
   };
 }
 
-export default defineConfig({
-  base,
-  plugins: [react(), cpanelMigrationManifest()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
+export default defineConfig(({ command, mode }) => {
+  // Para cPanel / subpasta em https://agenciaafrica.com.br/firx:
+  //   VITE_BASE=/firx/ (padrão em build de produção)
+  // Para ambiente local / dev preview:
+  //   VITE_BASE=/ (padrão em desenvolvimento)
+  const base = process.env.VITE_BASE || (command === 'build' || mode === 'production' ? '/firx/' : '/');
+
+  return {
+    base,
+    plugins: [react(), cpanelMigrationManifest(base)],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
-  },
   server: {
     port: 3000,
     host: '0.0.0.0',
@@ -73,5 +75,6 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
   },
+};
 });
 

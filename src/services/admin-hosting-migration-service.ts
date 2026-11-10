@@ -119,7 +119,7 @@ function base64ToBytes(value: string) {
 function migrationInstructions(base: string, backupCreatedAt: string) {
   const normalizedBase = `/${base.split('/').filter(Boolean).join('/')}${base.split('/').filter(Boolean).length ? '/' : ''}`;
   const targetPath = normalizedBase === '/' ? 'public_html' : `public_html/${normalizedBase.slice(1, -1)}`;
-  return `GROWMONEY — PACOTE DE MIGRAÇÃO PARA CPANEL\n\n` +
+  return `FIRX — PACOTE DE MIGRAÇÃO PARA CPANEL\n\n` +
     `Pacote gerado em: ${new Date().toLocaleString('pt-BR')}\n` +
     `Base usada nesta build: ${base}\n` +
     `Backup operacional gerado em: ${backupCreatedAt}\n\n` +
@@ -132,14 +132,14 @@ function migrationInstructions(base: string, backupCreatedAt: string) {
     `SERVIÇOS E DADOS\n` +
     `Esta transferência leva a aplicação web estática para o cPanel. Autenticação, banco, arquivos armazenados e funções continuam no projeto Supabase atualmente configurado na build. Não exclua nem encerre esse projeto.\n` +
     `No Supabase, adicione o novo domínio HTTPS à lista de Redirect URLs e atualize Site URL. Atualize também APP_ORIGIN da função smtp-mailer para a nova origem da aplicação.\n` +
-    `O arquivo dados/growmoney-backup-operacional.json contém somente os datasets permitidos para backup. Ele não contém usuários/autenticação, permissões, auditoria, segredos SMTP, envelopes e tokens privados de assinatura, nem arquivos binários do Storage.\n` +
+    `O arquivo dados/firx-backup-operacional.json contém somente os datasets permitidos para backup. Ele não contém usuários/autenticação, permissões, auditoria, segredos SMTP, envelopes e tokens privados de assinatura, nem arquivos binários do Storage.\n` +
     `O backup serve para restauração compatível pelo painel administrativo. Uma migração para outro projeto Supabase requer configurar o novo backend, aplicar migrations, recriar autenticação/permissões, copiar arquivos do Storage e planejar a restauração dos dados.\n\n` +
     `SMTP DA HOSPEDAGEM\n` +
-    `A pasta api inclui smtp.php e a proteção .htaccess. Por segurança, o arquivo smtp-config.php não é incluído. Se for usar a ponte SMTP neste cPanel, crie public_html/grow/api/smtp-config.php com uma chave aleatória de pelo menos 32 caracteres, proteja-a e configure a mesma chave no segredo SMTP_HOSTING_API_KEY da função smtp-mailer no Supabase.\n` +
-    `Configure SMTP_HOSTING_API_URL como https://SEU-DOMINIO/grow/api/smtp.php e mantenha SMTP_ENCRYPTION_KEY atual no Supabase para preservar a leitura da senha SMTP armazenada. Não publique nem compartilhe essas chaves.\n\n` +
+    `A pasta api inclui smtp.php e a proteção .htaccess. Por segurança, o arquivo smtp-config.php não é incluído. Se for usar a ponte SMTP neste cPanel, crie public_html/firx/api/smtp-config.php com uma chave aleatória de pelo menos 32 caracteres, proteja-a e configure a mesma chave no segredo SMTP_HOSTING_API_KEY da função smtp-mailer no Supabase.\n` +
+    `Configure SMTP_HOSTING_API_URL como https://SEU-DOMINIO/firx/api/smtp.php e mantenha SMTP_ENCRYPTION_KEY atual no Supabase para preservar a leitura da senha SMTP armazenada. Não publique nem compartilhe essas chaves.\n\n` +
     `CONTEÚDO\n` +
     `- Aplicação compilada e arquivos públicos atuais\n` +
-    `- Regras .htaccess para subpasta /grow e proteção de configuração SMTP\n` +
+    `- Regras .htaccess para subpasta /firx e proteção de configuração SMTP\n` +
     `- Ponte PHP SMTP sem chaves privadas\n` +
     `- Backup operacional JSON com exclusões descritas acima\n`;
 }

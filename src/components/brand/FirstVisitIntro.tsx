@@ -68,13 +68,13 @@ export function FirstVisitIntro() {
       ref={overlayRef}
       className="fixed inset-0 z-[10000] grid h-[100svh] w-full place-items-center overflow-hidden bg-white text-slate-950"
       role="status"
-      aria-label="Apresentação inicial do GrowMoney e da Agência AFRICA"
+      aria-label="Apresentação inicial do firx e da Agência AFRICA"
     >
       <div className="relative grid w-full place-items-center px-6">
         <div ref={growLogoRef} className="col-start-1 row-start-1 opacity-0" aria-hidden="true">
           <img
             src={BRAND.logoLight}
-            alt="GrowMoney"
+            alt="firx"
             className="h-auto max-h-[22svh] w-auto max-w-[min(78vw,380px)] object-contain"
             decoding="async"
           />

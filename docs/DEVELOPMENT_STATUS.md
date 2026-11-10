@@ -19,7 +19,7 @@
 - [x] Configuração do Supabase (client.ts com credenciais configuradas)
 
 ### Configuração do Supabase
-- URL: https://qgzplvrpzjqhqpbtszxs.supabase.co
+- URL: https://kwpqfsklwovlibqyiunl.supabase.co
 - Anon Key configurada
 - Auth: autoRefreshToken, persistSession, detectSessionInUrl
 

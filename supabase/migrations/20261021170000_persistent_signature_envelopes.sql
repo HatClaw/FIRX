@@ -8,6 +8,9 @@ CREATE TABLE IF NOT EXISTS public.signature_envelopes (
   updated_at timestamptz NOT NULL DEFAULT now()
 );
 
+ALTER TABLE public.signature_envelopes ADD COLUMN IF NOT EXISTS owner_id uuid REFERENCES auth.users(id) ON DELETE CASCADE;
+ALTER TABLE public.signature_envelopes ADD COLUMN IF NOT EXISTS payload jsonb;
+
 CREATE INDEX IF NOT EXISTS signature_envelopes_owner_updated_idx
   ON public.signature_envelopes (owner_id, updated_at DESC);
 

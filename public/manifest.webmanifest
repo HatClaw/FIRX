@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Grow Money Digital",
-  "short_name": "GROW",
+  "name": "firx",
+  "short_name": "firx",
   "description": "Gestão financeira inteligente para empresas que crescem",
   "start_url": "./vendedor?source=pwa",
   "scope": "./",

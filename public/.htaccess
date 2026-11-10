@@ -1,16 +1,16 @@
-# Grow Money — SPA em subpasta /grow
-# Coloque este arquivo junto com index.html dentro de public_html/grow/
+# firx — SPA em subpasta /firx
+# Coloque este arquivo junto com index.html dentro de public_html/firx/
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /grow/
+  RewriteBase /firx/
 
   # Arquivos e pastas reais (assets, etc.) passam direto
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Demais rotas do React → index.html
-  RewriteRule . /grow/index.html [L]
+  # Demais rotas da SPA -> /firx/index.html
+  RewriteRule . /firx/index.html [L]
 </IfModule>
 
 # Cache de assets estáticos
@@ -19,4 +19,3 @@
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
-

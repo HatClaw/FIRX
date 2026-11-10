@@ -95,7 +95,7 @@ const workflow = [
 ];
 
 const faqs = [
-  { q: 'O GrowMoney funciona no celular?', a: 'Sim. A interface se adapta a celular, tablet e computador. O sistema também oferece instalação PWA quando o navegador é compatível.' },
+  { q: 'O firx funciona no celular?', a: 'Sim. A interface se adapta a celular, tablet e computador. O sistema também oferece instalação PWA quando o navegador é compatível.' },
   { q: 'Como os vendedores entram no sistema?', a: 'O administrador cadastra o vendedor, envia o link de ativação e define o vínculo. Depois do login, o vendedor acessa uma área própria para visitas e rotas.' },
   { q: 'A localização do vendedor fica sempre ativa?', a: 'Não. O navegador solicita a permissão quando o vendedor inicia uma rota. A posição é atualizada durante o deslocamento com o app aberto.' },
   { q: 'Os clientes precisam criar uma conta para assinar?', a: 'O cliente acessa o documento pelo link individual enviado pela empresa e segue o fluxo de assinatura disponível.' },
@@ -346,7 +346,7 @@ export default function LandingPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div data-reveal className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand">Uma operação conectada</p>
-              <h2 className="font-display text-3xl font-light leading-tight tracking-[-0.045em] sm:text-4xl">Explore os módulos do <span className="font-bold">GrowMoney.</span></h2>
+              <h2 className="font-display text-3xl font-light leading-tight tracking-[-0.045em] sm:text-4xl">Explore os módulos do <span className="font-bold">firx.</span></h2>
               <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-text-secondary sm:text-base">Abra uma seção para conhecer os fluxos que ajudam sua empresa a sair de informações espalhadas para uma rotina acompanhável.</p>
             </div>
             <div className="grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.35fr)] lg:gap-8">

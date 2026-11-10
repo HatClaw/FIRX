@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 84" fill="none">
+  <g>
+    <rect x="8" y="16" width="52" height="52" rx="14" fill="url(#firx_grad)" />
+    <path d="M24 42L32 50L44 34" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="74" y="55" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="44" fill="#ffffff" letter-spacing="-1.5">fir<tspan fill="#ff6a00">x</tspan></text>
+  </g>
+  <defs>
+    <linearGradient id="firx_grad" x1="8" y1="16" x2="60" y2="68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff6a00" />
+      <stop offset="1" stop-color="#c2410c" />
+    </linearGradient>
+  </defs>
+</svg>

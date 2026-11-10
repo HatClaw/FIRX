@@ -9,7 +9,7 @@ import { AdminSmtpService, type MailchimpTemplate, type SmtpSettings } from '@/s
 import { DEFAULT_EMAIL_TEMPLATES, EMAIL_BRAND_LOGO_ASSET, EMAIL_TEMPLATE_INFO, EMAIL_TEMPLATE_KEYS, EMAIL_TEMPLATE_PREVIEW_VALUES, renderEmailHtmlTemplate, type EmailTemplate, type EmailTemplateKey } from '@/lib/email-templates';
 
 type SmtpForm = Omit<SmtpSettings, 'passwordConfigured'> & { password: string };
-const emptySmtp: SmtpForm = { host: '', port: 587, secure: false, username: '', password: '', fromEmail: '', fromName: 'GrowMoney', enabled: false };
+const emptySmtp: SmtpForm = { host: '', port: 587, secure: false, username: '', password: '', fromEmail: '', fromName: 'firx', enabled: false };
 
 function escapePreviewHtml(value: string) {
   return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character] || character);
@@ -180,7 +180,7 @@ export default function AdminSistema() {
       const importedContent = importedDocument.querySelector('.email-content') || importedDocument.body;
       const currentDocument = new DOMParser().parseFromString(emailTemplates[emailTemplateKey].html, 'text/html');
       const currentContent = currentDocument.querySelector('.email-content');
-      if (!currentContent) throw new Error('O modelo GrowMoney atual não tem a área de conteúdo padrão.');
+      if (!currentContent) throw new Error('O modelo firx atual não tem a área de conteúdo padrão.');
       const content = importedContent.innerHTML
         .replace(/\*\|\s*FNAME\s*\|\*/gi, '{{nome}}')
         .replace(/\*\|\s*EMAIL\s*\|\*/gi, '{{email}}')
@@ -190,7 +190,7 @@ export default function AdminSistema() {
       const candidate = { subject: remote.subject || emailTemplates[emailTemplateKey].subject, html };
       await AdminSmtpService.saveEmailTemplate(emailTemplateKey, candidate);
       setEmailTemplates((current) => ({ ...current, [emailTemplateKey]: candidate }));
-      setEmailTemplateNotice(`Modelo “${remote.name}” importado para ${EMAIL_TEMPLATE_INFO[emailTemplateKey].name}. O cabeçalho Agência AFRICA e o rodapé GrowMoney foram preservados.`);
+      setEmailTemplateNotice(`Modelo “${remote.name}” importado para ${EMAIL_TEMPLATE_INFO[emailTemplateKey].name}. O cabeçalho Agência AFRICA e o rodapé firx foram preservados.`);
     } catch (error) {
       setEmailTemplateError(error instanceof Error ? error.message : 'Não foi possível importar este modelo.');
     } finally {
@@ -372,7 +372,7 @@ export default function AdminSistema() {
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <div className="flex items-center gap-2"><Mail className="h-5 w-5 text-brand" /><h2 className="font-semibold">Modelos de e-mail</h2></div>
-            <p className="mt-1 text-sm text-text-secondary">Edite o assunto e o HTML das mensagens transacionais. A logo da Agência AFRICA aparece obrigatoriamente no cabeçalho de todos os envios; os dados da GrowMoney permanecem no rodapé.</p>
+            <p className="mt-1 text-sm text-text-secondary">Edite o assunto e o HTML das mensagens transacionais. A logo da Agência AFRICA aparece obrigatoriamente no cabeçalho de todos os envios; os dados da firx permanecem no rodapé.</p>
           </div>
           <Button type="button" size="sm" variant="outline" leftIcon={<RefreshCw className="h-4 w-4" />} loading={emailTemplatesLoading} onClick={() => void loadEmailTemplates()}>Atualizar modelos</Button>
         </div>
@@ -380,7 +380,7 @@ export default function AdminSistema() {
           <div className="space-y-3 rounded-xl border border-border-color bg-bg-secondary/40 p-4">
             <div>
               <h3 className="text-sm font-semibold">Modelos do Mailchimp Transactional</h3>
-              <p className="mt-1 text-xs text-text-secondary">Salve primeiro a configuração usando o host smtp.mandrillapp.com e uma chave API Transactional. A consulta é feita pelo servidor; depois importe cada modelo para o tipo de mensagem selecionado. O layout GrowMoney, a logo e o rodapé da empresa permanecem no template.</p>
+              <p className="mt-1 text-xs text-text-secondary">Salve primeiro a configuração usando o host smtp.mandrillapp.com e uma chave API Transactional. A consulta é feita pelo servidor; depois importe cada modelo para o tipo de mensagem selecionado. O layout firx, a logo e o rodapé da empresa permanecem no template.</p>
             </div>
             <div className="flex flex-wrap items-end gap-2">
               <Button type="button" variant="outline" loading={mailchimpSyncing} disabled={smtp.host !== 'smtp.mandrillapp.com' || !passwordConfigured} onClick={() => void syncMailchimpTemplates()}>Conectar e carregar modelos</Button>

@@ -25,7 +25,7 @@ export default function Relatorios() {
             </div>
             <div className="flex gap-2">
               <Button size="sm" variant="outline" leftIcon={<FileText className="w-4 h-4" />}
-                onClick={() => exportPdf(r.title, `<p>Relatório: ${r.id}</p><p>Gerado pelo Grow Money Digital.</p>`)}>
+                onClick={() => exportPdf(r.title, `<p>Relatório: ${r.id}</p><p>Gerado pelo firx.</p>`)}>
                 PDF
               </Button>
               <Button size="sm" variant="ghost" leftIcon={<Download className="w-4 h-4" />}>CSV</Button>
