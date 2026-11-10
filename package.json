@@ -17,7 +17,8 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "format": "prettier --write .",
-    "supabase:migration:new": "supabase migration new"
+    "supabase:migration:new": "supabase migration new",
+    "start": "vite preview --host 0.0.0.0 --port 3000"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
